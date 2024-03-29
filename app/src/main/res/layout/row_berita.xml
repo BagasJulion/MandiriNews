@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="15dp"
+    android:id="@+id/card_view"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="6dp"
+    app:contentPadding="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="25dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginEnd="15dp">
+
+            <ImageView
+                android:id="@+id/newsImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:scaleType="centerCrop"
+                tools:src="@tools:sample/avatars"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/cardView"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/user_symbol"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_media"
+            android:scaleType="centerCrop"
+            android:layout_toRightOf="@id/cardView"
+            android:layout_below="@+id/titleTextView"/>
+
+
+        <TextView
+            android:id="@+id/authorTextViewAll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titleTextView"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="10dp"
+            android:textSize="12sp"
+            android:layout_toEndOf="@id/cardView"
+            android:layout_toRightOf="@id/user_symbol" />
+
+
+        <TextView
+            android:id="@+id/publish_news"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="10dp"
+            android:textSize="12dp"
+            android:layout_toEndOf="@id/cardView"
+            android:layout_toRightOf="@id/calendar"
+            android:layout_below="@+id/user_symbol"/>
+
+        <ImageView
+            android:id="@+id/calendar"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_calender"
+            android:scaleType="centerCrop"
+            android:layout_toRightOf="@id/cardView"
+            android:layout_below="@id/user_symbol"/>
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
